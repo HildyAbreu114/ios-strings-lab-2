@@ -30,7 +30,14 @@ them
 on
 separate
 lines
+
 ```
+var problem = "split this string into words and print them on separate lines"
+var problemArr = problem.split(separator: " ")
+print (problemArr)
+for i in problemArr {
+print (i)
+}
 
 
 ## Question 2
@@ -53,6 +60,12 @@ Sample Input: `"Swift is the best language"`
 
 Sample Output: `"language best the is Swift"`
 
+let tString: String = "Swift is the best language"
+let tStringArr = tString.split(separator:" ")
+var reverse = (tStringArr.reversed())
+for word  in reverse {
+print ( word, terminator:" ")
+}
 
 ## Question 4
 
@@ -63,6 +76,22 @@ Example:
 Sample Input: `"danaerys dad cat civic bottle"`
 
 Sample Output: `2`
+
+var aString = "danaerys dad cat civic bottle"
+let aStringArr = aString.split(separator: " ")
+var reverse = String(aString.reversed())
+let reverseArray = reverse.split(separator: " ")
+
+var palindromeCount = 0
+
+for word in aStringArr {
+for word1 in reverseArray {
+if word == word1 {
+palindromeCount += 1
+}
+}
+}
+print(palindromeCount)
 
 
 ## Question 5
